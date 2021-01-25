@@ -1,0 +1,163 @@
+.sidebar {
+	background-color: #f5f5f5;
+	width: 320px;
+	height:100vh;
+	display:flex;
+	flex-direction:column;
+	border: 1px solid lightgray;
+	transition: margin 0.2s;
+	position:relative;
+}
+
+.sidebar-header {
+	display:flex;
+	justify-content: space-between;
+	align-items:center;
+	height:50px;
+}
+.sidebar-avatar {
+	cursor:pointer;
+	margin:10px;
+}
+.sidebar-input {
+	display:flex;
+	align-items:center;
+	flex:1;
+	background-color: #e1e1e1;
+	color: gray;
+	border-radius:5px;
+	margin-right: 10px;
+}
+
+.sidebar-input > input {
+	border:0;
+	outline-width:0;
+	background:transparent;
+}
+
+.sidebar-chats {
+	flex:1;
+	overflow:auto;
+}
+
+.sidebar-chats > a{
+	color:black;
+	text-decoration:none;
+}
+
+.sidebar-chats::-webkit-scrollbar {
+	display:none;
+}
+
+.sidebar-chat-a {
+	display:flex;
+	border-bottom:1px solid lightgray;
+}
+
+.addroom-btn {
+	color: black;
+	text-decoration:none;
+}
+
+a.addroom-btn {
+	text-align:left;
+	padding:0;
+}
+
+.sidebar-chat {
+	display:flex;
+	align-items:center;
+	padding:20px;
+	cursor: pointer;
+	position:relative;
+	flex:1;
+}
+
+.sidebar-chat:hover {
+	background:#3e93fd;
+	color:white;
+}
+
+.sidebar-chat-info {
+	margin-left:15px;
+	position:relative;
+	width:100%;
+	max-width: 224px;
+	word-wrap: break-word
+}
+
+.sidebar-chat-info > p {
+	font-size: 12px;
+	margin-top:5px;
+	color: gray;
+}
+
+.sidebar-chat-info > small {
+	position:absolute;
+	right: 0px;
+	bottom: -15px;
+	font-size:9px;
+}
+
+.more-option {
+	color: gray;
+	position:absolute;
+	top:0;
+	right: 0;
+}
+
+.more-option .icon {
+	font-size: 30px;
+	cursor:pointer;
+	background:transparent;
+}
+
+.sidebar-chat:hover .more-option .icon {
+	color: white;
+}
+
+.sidebar-chat:hover .sidebar-chat-info > p {
+	color:white;
+}
+
+.delete-option {
+	background:white;
+	padding: 3px 5px;
+	font-size:11px;
+	position:absolute;
+	top: 70%;
+	right:5px;
+	z-index:1;
+	border: 1px solid lightgray;
+	cursor:pointer;
+}
+
+.delete-option:hover {
+	font-weight: 600;
+	color: black;
+}
+
+.sidebar-input-button:hover .add-chat {
+	color:#3cabfa;
+}
+
+.addroom-btn {
+	border:none;
+	outline: none;
+	padding: 1rem 0;
+	display: block;
+	text-align: center;
+	width: 100%;
+	font-size: 1.1rem;
+	cursor: pointer;
+}
+
+.addroom-btn:hover {
+	font-weight: 600;
+}
+
+@media screen and (max-width: 700px) {
+	.sidebar {
+		margin-left: -320px;
+	}
+}
